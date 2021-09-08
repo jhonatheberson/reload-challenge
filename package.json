@@ -7,6 +7,7 @@
   "author": "jhonatheberson <jhonatheberson@outlook.com.br>",
   "license": "MIT",
   "scripts": {
+    "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js"
   },
   "husky": {
