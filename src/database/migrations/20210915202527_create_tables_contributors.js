@@ -2,10 +2,10 @@
 exports.up = knex => knex.schema.createTable('contributors', (table) =>{
   table.increments('id')
   table.string('firstName', [30]).notNullable()
-  table.string('lastName', [30]).notNullable()
-  table.string('title', [30]).notNullable()
+  table.string('lastName', [30])
+  table.string('title', [30])
   table.string('jobTitle', [30]).notNullable()
-  table.integer('age', [30]).notNullable()
+  table.integer('age', [30])
   table.integer('company_id').unsigned().notNullable()
 
 
