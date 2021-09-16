@@ -1,11 +1,12 @@
 // Update with your config settings.
+require('dotenv/config');
 
 module.exports = {
   development: {
     client: 'mysql2',
     connection: {
       host: '127.0.0.1',
-      port: 3308,
+      port: 3306,
       user: 'teste',
       password: '1298',
       database: 'reload',

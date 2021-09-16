@@ -1,7 +1,7 @@
-
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('contributors').del()
+  return knex('contributors')
+    .del()
     .then(function () {
       // Inserts seed entries
       return knex('contributors').insert([
@@ -58,7 +58,7 @@ exports.seed = function(knex) {
           jobTitle: 'Legacy Implementation Strategist',
           age: 23,
           company_id: 1,
-        }
+        },
       ]);
     });
 };

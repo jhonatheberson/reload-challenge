@@ -46,7 +46,7 @@ exports.seed = function (knex) {
           full_address: '841 Bergstrom Forges',
           latitude: '28.1895',
           longitude: '-50.9781',
-        }
+        },
       ]);
     });
 };

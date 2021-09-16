@@ -11,7 +11,7 @@ services:
     ports:
       - '3333:3333'
     volumes:
-      - .:/application
+      - .:/usr/app
 
 
   db:
@@ -20,12 +20,18 @@ services:
     command: --default-authentication-plugin=mysql_native_password --sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER --explicit_defaults_for_timestamp
     restart: always
     ports:
-      - '3308:3306'
+      - '3306:3306'
     environment:
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=teste
+      - MYSQL_PASSWORD=1298
+      - MYSQL_ROOT_PASSWORD=1298
+      - MYSQL_DATABASE=reload
+      - TZ=America/Sao_Paulo
+      # - MYSQL_USER=${MYSQL_USER}
+      # - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      # - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      # - MYSQL_DATABASE=${MYSQL_DATABASE}
+
 
 
 

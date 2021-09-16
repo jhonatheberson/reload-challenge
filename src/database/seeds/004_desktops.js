@@ -1,7 +1,7 @@
-
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('desktops').del()
+  return knex('desktops')
+    .del()
     .then(function () {
       // Inserts seed entries
       return knex('desktops').insert([
@@ -44,7 +44,7 @@ exports.seed = function(knex) {
           os: 'Catalina (10.15)',
           ip: '0.255.168.51',
           company_id: 3,
-        }
+        },
       ]);
     });
 };
