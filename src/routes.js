@@ -4,6 +4,7 @@ import { Router } from 'express';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import CompanyController from './app/controllers/CompanyController';
+import DesktopsController from './app/controllers/DesktopsController';
 
 import authMiddleware from './app/middleware/auth';
 import errorMiddleware from './app/middleware/error';
@@ -26,5 +27,8 @@ routes.post('/company', CompanyController.store);
 // logo as rotas posts acima não é executado esse middleware
 routes.use(errorMiddleware); // middleware global de auth
 routes.use(authMiddleware); // middleware global de auth
+
+//routes desktops
+routes.get('/desktops',DesktopsController.index);
 
 module.exports = routes;

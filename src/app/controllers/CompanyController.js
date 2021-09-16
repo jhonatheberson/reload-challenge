@@ -1,6 +1,4 @@
 import knex from '../../database';
-import * as Yup from 'yup'; // pacote de validação
-import { NONE } from 'sequelize';
 
 class CompanyController {
   async index(req, res, next) {
@@ -38,6 +36,11 @@ class CompanyController {
       ];
       let column_desktops = ['platform', 'type', 'os', 'ip'];
       let results = [];
+
+      // a complexiadade asíntotica deste algoritmo de busca
+      // é O(n²), ou seja no pior caso,
+      // poderia fazer de uma outra forma, porém precisaria de mais tempo,
+      //  e usando SQL acho improvável realizar com custo computacional menor
       if (req.query.company !== undefined) {
         for (var i = 0; i < column_company.length; i++) {
           const find = await knex('company').where(
