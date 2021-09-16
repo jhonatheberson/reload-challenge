@@ -3,14 +3,23 @@ import jwt from 'jsonwebtoken';
 import * as Yup from 'yup'; // pacote de validação
 import authConfig from '../../config/auth';
 import bcrypt from 'bcryptjs';
-
-// isso será usado para verificar se o user esta logado
-class SesssionController {
+/**
+ * this class controls the session the users
+ */
+class SessionController {
+  /**
+   * this function does the post method control
+   * @summary this function creates a token for a user
+   * @param {Express} req - this parameter is responsible for bringing the data sent (request)
+   * @param {Express} res - this para is responsible for returning the answer (response)
+   * @param {Express} next - this parameter is responsible for when an error occurs, or ecession it is called, by default, in this case it is used here to return the error
+   * @return {json} returns json object containing users and token
+   */
   async store(req, res, next) {
     try {
       const schema = Yup.object().shape({
         email: Yup.string().email().required(),
-        password: Yup.string().required(), // compo senha é string, obrigatorio
+        password: Yup.string().required(), // password field is string, required
       });
 
       if (!(await schema.isValid(req.body))) {
@@ -48,4 +57,4 @@ class SesssionController {
   }
 }
 
-export default new SesssionController();
+export default new SessionController();
