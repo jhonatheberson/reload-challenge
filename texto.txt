@@ -1,0 +1,26 @@
+link: https://github.com/jhonatheberson/reload-challenge
+
+
+
+Segue em anexo o link como solicitado.
+
+Realizei a implementação da API como solictado, somado a isso, ainda implementei também outras funcionalidade importantes como autenticação JWT, Tabela e controllers de usuarios relacionado as empresas, Middlewares.
+
+Vale ressaltar que, todo o projeto foi realizado em padrões de desenvolvimento, como padronização de commits, documentação da API, com docstring, padrões de pastas entre outras coisas indíspensável.
+
+
+
+Também utilizei a ferramenta Wakatime, como já mencionado, não poderia trabalhar no desafio no momento que foi proposto devido ter outras tarefas já agendados,  essa ferramento possibilida verificar quando tempo aproximado eu realmente estive desenvolvendo a API, segue em anexo o link: https://wakatime.com/@f8b3e62b-aea3-4725-b082-4c6ea016315b/projects/pxfgqnxdxz?start=2021-09-10&end=2021-09-16.
+
+
+
+OBS: um dos requitos foi colocar a autenticação por meio do banco de memoria (chave, valor) Redis, porém de acordo com minha formação de engenharia da computação, esse recurso computacional estaria sendo utilizado de forma, não adequado devido poder realizar essa mesma tarefa sem utiliza-lo, por esse motivo implementei a autenticação JWT de forma eficiênte, e não elevando os recursos utilizados fazendo assim "Trade-off", deixando o Redis, para gerenciamento de filas e jobs, como comumente é utilizado.
+
+
+
+Respeitosamente,
+
+Jhonat Heberson
+
+
+
