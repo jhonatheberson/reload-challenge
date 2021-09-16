@@ -1,3 +1,10 @@
+/**
+ * this function seed the database in table company
+ * @summary this function manages to populate the database more simply, using json format objects
+ * @param {KNEX.JS} knex - knex is the main parameter and where it is possible to perform the insertion in the database in a simple way
+ * @return {KNEX.JS} returns knex insert object
+ */
+
 exports.seed = function (knex) {
   // Deletes ALL existing entries
   return knex('company')
