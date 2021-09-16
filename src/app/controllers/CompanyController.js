@@ -2,7 +2,6 @@ import knex from '../../database';
 
 /**
  * this class controls the company entity
- *
  */
 class CompanyController {
   /**
