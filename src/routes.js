@@ -3,16 +3,24 @@ import { Router } from 'express';
 
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import CompanyController from './app/controllers/CompanyController';
 
 import authMiddleware from './app/middleware/auth';
 import errorMiddleware from './app/middleware/error';
 
 const routes = new Router();
 
+// routes users
 routes.post('/users', UserController.store);
 routes.get('/users', UserController.index);
 
+// routes sessions
 routes.post('/sessions', SessionController.store);
+
+
+// routes company
+routes.get('/company', CompanyController.index);
+routes.post('/company', CompanyController.store);
 
 // esse middleware so é executado apos ele ser declarado.
 // logo as rotas posts acima não é executado esse middleware

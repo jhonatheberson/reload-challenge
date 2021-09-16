@@ -1,7 +1,6 @@
 import knex from '../../database';
 import jwt from 'jsonwebtoken';
 import * as Yup from 'yup'; // pacote de validação
-const knex = require('../../database');
 import authConfig from '../../config/auth';
 import bcrypt from 'bcryptjs';
 

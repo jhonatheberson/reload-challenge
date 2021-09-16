@@ -41,9 +41,13 @@ class UserController {
   }
 
   async index(req, res) {
-    const results = await knex('users');
+    try {
+      const results = await knex('users');
 
-    return res.json(results);
+      return res.json(results);
+    } catch (error) {
+      next(error);
+    }
   }
 }
 
