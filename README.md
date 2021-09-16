@@ -165,6 +165,13 @@ $ yarn dev
 <img alt="Ecoleta" title="#API_RUN" src="./assets/api_run.png" width="600px">
 </p>
 
+### perceba que o não estou conseguindo rodar api direto no docker, ele está dando problema de conexão confusa, deve ser alguma porta, algo do tipo relacionado a rede, como já mencionei acima.
+
+## mas se para o container da api, e rodar *yarn dev* no terminal irá funcionar perfeitamente, como já mencionado acima.
+
+<img alt="Ecoleta" title="#API_RUN" src="./assets/docker.png" width="600px">
+</p>
+
 <p align="center">
   <a href="https://github.com/jhonatheberson/reload-challenge/blob/master/Insomnia_API.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>

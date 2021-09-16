@@ -25,6 +25,7 @@ exports.seed = function (knex) {
           full_address: '2037 Champlin Summit',
           latitude: '-73.1783',
           longitude: '55.6623',
+          user_id: 1,
         },
         {
           id: 2,
@@ -39,6 +40,7 @@ exports.seed = function (knex) {
           full_address: '77973 Roberta Mews',
           latitude: '-8.2864',
           longitude: '-63.0891',
+          user_id: 2,
         },
         {
           id: 3,
@@ -53,6 +55,7 @@ exports.seed = function (knex) {
           full_address: '841 Bergstrom Forges',
           latitude: '28.1895',
           longitude: '-50.9781',
+          user_id: 3,
         },
       ]);
     });

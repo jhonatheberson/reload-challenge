@@ -20,17 +20,13 @@ services:
     command: --default-authentication-plugin=mysql_native_password --sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER --explicit_defaults_for_timestamp
     restart: always
     ports:
-      - '3306:3306'
+      - "${DB_PORT}:${DB_PORT}"
     environment:
-      - MYSQL_USER=teste
-      - MYSQL_PASSWORD=1298
-      - MYSQL_ROOT_PASSWORD=1298
-      - MYSQL_DATABASE=reload
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
       - TZ=America/Sao_Paulo
-      # - MYSQL_USER=${MYSQL_USER}
-      # - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      # - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
-      # - MYSQL_DATABASE=${MYSQL_DATABASE}
 
 
 

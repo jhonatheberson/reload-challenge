@@ -57,7 +57,7 @@ class UserController {
    * @param {Express} next - this parameter is responsible for when an error occurs, or ecession it is called, by default, in this case it is used here to return the error
    * @return {json} returns json com users
    */
-  async index(req, res) {
+  async index(req, res, next) {
     try {
       const results = await knex('users');
 
