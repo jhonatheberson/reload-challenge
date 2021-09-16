@@ -3,17 +3,17 @@
 </h1>
 
 <h1 align="center">
-   🙂 <a href="#"> Digital image processing </a>
+   🙂 <a href="#"> reload challenge </a>
 </h1>
 
 <h3 align="center">
-    image processing using the OpenCV library
+    this is a challenge proposed by the reload company, for an evaluation process, for employment opportunities
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/digital-image-processing?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/reload-challenge?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/digital-image-processing">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/reload-challenge">
 
   <!-- <a href="https://www.twitter.com/jhonatheberson/">
     <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fjhonatheberson%2FREADME-ecoleta">
@@ -22,103 +22,107 @@
   <a href="https://github.com/jhonatheberson/easy-church/releases">
         <img alt="GitHub release" src="https://raster.shields.io/github/v/release/jhonatheberson/template.svg">
   </a>
-  <a href="https://github.com/jhonatheberson/digital-image-processing/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/digital-image-processing">
+  <a href="https://github.com/jhonatheberson/reload-challenge/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/reload-challenge">
   </a>
 
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/jhonatheberson/digital-image-processing/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/digital-image-processing?style=social">
+   <a href="https://github.com/jhonatheberson/reload-challenge/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/reload-challenge?style=social">
   </a>
 
   <a href="https://github.com/jhonatheberson">
     <img alt="made by JhonatHeberson" src="https://img.shields.io/badge/made%20by-jhonatheberson-%237519C1">
   </a>
-  
+
   <!-- <a href="https://blog.rocketseat.com.br/">
     <img alt="Stargazers" src="https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=flat&logo=ghost">
     </a>  -->
 </p>
 
-<h4 align="center"> 
-	 Status: development
-    <!-- Status: Finished -->
+<h4 align="center">
+	 <!-- Status: development -->
+    Status: Finished
 </h4>
 
 <p align="center">
  <a href="#about">About</a> •
  <a href="#features">Features</a> •
- <a href="#layout">Layout</a> • 
- <a href="#how-it-works">How it works</a> • 
- <a href="#tech-stack">Tech Stack</a> • 
- <a href="#contributors">Contributors</a> • 
- <a href="#author">Author</a> • 
+ <a href="#layout">Layout</a> •
+ <a href="#how-it-works">How it works</a> •
+ <a href="#tech-stack">Tech Stack</a> •
+ <a href="#contributors">Contributors</a> •
+ <a href="#author">Author</a> •
  <a href="#user-content-license">License</a>
 
 </p>
 
 ## About
 
-🌌 Digital image processing - iis the study and application of image processing using [OpenCV](https://docs.opencv.org/master/index.html). with this library we will apply filters, recognize objects, count, among other things in the world of image processing.
+this challenge was used pure [node.js](https://nodejs.org/en/) with [express](https://expressjs.com/pt-br/), and [Knex](https://knexjs.org/) for database connection, using migrations, seed. also performed using automation with [docker](https://www.docker.com/), and [docker-compose](https://docs.docker.com/compose/), to automate, relational database [mysql](https://www.mysql.com/), memory database [redis](https://redis.io/) and propria api.
 
 ---
 
 ## Features
 
-- [x] Companies or entities can register on the web platform by sending:
+- [x] build a restful, five-route API:
 
-  - [x] an image of the collection point
-  - [x] entity name, email and whatsapp
-  - [x] and the address so that it can appear on the map
-  - [x] in addition to selecting one or more collection items:
-    - lamps
-    - Batteries
-    - papers and cardboard
-    - electronic waste
-    - organic waste
-    - kitchen oil
+  - [x] get list of all companies.
+  - [x] POST that receives a search term for a company, this search, needs to develop a search algorithm for each company term or contributor, or desktop.
+  - [x] Get every desktop from every company
+  - [x] Get all desktops from a company
+  - [x] get all employees of a company
 
-- [x] Users have access to the mobile application, where they can:
-  - [x] browse the map to see the registered institutions
-  - [x] contact the entity via E-mail or WhatsApp
+
+- [x] create a seed with knex from provided dataset
+- [x] create a migration with knex from the data model
+- [x] define the redis database and make sure the data does not expire.  **in this requirement, as a computer engineer, I find it unnecessary to use the redis database for authentication, so I implemented it in another way, thus performing treadoff, to use Redis, for more relevant processes such as managing queues and jobs**
+- [x] using docker, create a docker-compose to structure the databases (MySQL and Redis) and leave the IP / ports bound in the application
+- [x] use environment variables in an .env (leave the .env.example as a clone with data)
+
+
+## PLUS:
+
+- [x] creation of routes and controller, for user table related to company
+- [x] authentication with JWT, securely and efficiently without using Redis. *obs: it expires in 7 days, but I can leave it to never sneeze as requested*
 
 ---
 
 ## Layout
 
-The application layout is available on Figma:
+<!-- The application layout is available on Figma:
 
 <a href="https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A546">
   <img alt="Made by jhonatheberson" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
-</a>
+</a> -->
 
-### Mobile
+<!-- ### Mobile
 
 <p align="center">
   <img alt="Ecoleta" title="#Ecoleta" src="./assets/home-mobile.png" width="200px">
 
   <img alt="Ecoleta" title="#Ecoleta" src="./assets/detalhes-mobile.svg" width="200px">
-</p>
+</p> -->
 
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Ecoleta" title="#Ecoleta" src="./assets/web.svg" width="400px">
+  <img alt="Ecoleta" title="#Ecoleta" src="./assets/REQUISITOS.png" width="400px">
 
-  <img alt="Ecoleta" title="#Ecoleta" src="./assets/sucesso-web.svg" width="400px">
+  <img alt="Ecoleta" title="#Ecoleta" src="./assets/REQUISITOS_2.png" width="400px">
 </p>
 
 ---
 
 ## How it works
 
-This project is divided into three parts:
+This project is divided into one parts:
 
 1. Backend (server folder)
-2. Frontend (web folder)
-3. Mobile (mobile folder)
+<!-- 2. Frontend (web folder)
+3. Mobile (mobile folder) -->
 
-Both Frontend and Mobile need the Backend to be running to work.
+<!-- Both Frontend and Mobile need the Backend to be running to work. -->
 
 ### Pre-requisites
 
@@ -131,29 +135,41 @@ In addition, it is good to have an editor to work with the code like [VSCode](ht
 ```bash
 
 # Clone this repository
-$ git clone git@github.com:jhonatheberson/README-ecoleta.git
+$ git clone git@github.com:jhonatheberson/reload-challenge.git
 
 # Access the project folder cmd/terminal
-$ cd README-ecoleta
+$ cd reload-challenge
 
-# go to the server folder
-$ cd server
+# run docker-compose
+$ docker-compose up
 
-# install the dependencies
-$ npm install
+# perform the migrations
+$ knex migrate:latest
 
-# Run the application in development mode
-$ npm run dev:server
+# run the seeds
+$ knex seed:run
+
+
+# I tried to run the api also inside the docker, but there is some conflict on the network, it is confused when trying to connect to the database
+
+#if this also occurs, on your machine, just execute a stop in the container only from the API
+
+#run api in terminal
+$ yarn dev
+
 
 # The server will start at port: 3333 - go to http://localhost:3333
 
 ```
 
-<p align="center">
-  <a href="https://github.com/jhonatheberson/digital-image-processing/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<img alt="Ecoleta" title="#API_RUN" src="./assets/api_run.png" width="600px">
 </p>
 
-#### Running the web application (Frontend)
+<p align="center">
+  <a href="https://github.com/jhonatheberson/reload-challenge/blob/master/Insomnia_API.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+</p>
+
+<!-- #### Running the web application (Frontend)
 
 ```bash
 
@@ -174,7 +190,7 @@ $ npm run start
 
 # The application will open on the port: 3000 - go to http://localhost:3000
 
-```
+``` -->
 
 ---
 
@@ -191,23 +207,25 @@ The following tools were used in the construction of the project:
 - **[React Leaflet](https://react-leaflet.js.org/)**
 - **[React Dropzone](https://github.com/react-dropzone/react-dropzone)**
 
-> See the file [package.json](https://github.com/jhonatheberson/README-ecoleta/blob/master/web/package.json)
+> See the file [package.json](https://github.com/jhonatheberson/README-ecoleta/blob/master/web/package.json) -->
 
-#### [](https://github.com/jhonatheberson/Ecoleta#server-nodejs--typescript)**Server** ([NodeJS](https://nodejs.org/en/) + [TypeScript](https://www.typescriptlang.org/))
+#### [](https://github.com/jhonatheberson/Ecoleta#server-nodejs--typescript)**Server** ([NodeJS](https://nodejs.org/en/)
+<!-- + [TypeScript](https://www.typescriptlang.org/) -->
+)
 
 - **[Express](https://expressjs.com/)**
 - **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
 - **[KnexJS](http://knexjs.org/)**
-- **[SQLite](https://github.com/mapbox/node-sqlite3)**
-- **[ts-node](https://github.com/TypeStrong/ts-node)**
+<!-- - **[SQLite](https://github.com/mapbox/node-sqlite3)**
+- **[ts-node](https://github.com/TypeStrong/ts-node)** -->
 - **[dotENV](https://github.com/motdotla/dotenv)**
 - **[Multer](https://github.com/expressjs/multer)**
-- **[Celebrate](https://github.com/arb/celebrate)**
-- **[Joi](https://github.com/hapijs/joi)**
+<!-- - **[Celebrate](https://github.com/arb/celebrate)**
+- **[Joi](https://github.com/hapijs/joi)** -->
 
-> See the file [package.json](https://github.com/jhonatheberson/README-ecoleta/blob/master/server/package.json)
+> See the file [package.json](https://github.com/jhonatheberson/reload-challenge/blob/master/server/package.json)
 
-#### [](https://github.com/jhonatheberson/Ecoleta#mobile-react-native--typescript)**Mobile** ([React Native](http://www.reactnative.com/) + [TypeScript](https://www.typescriptlang.org/))
+<!-- #### [](https://github.com/jhonatheberson/Ecoleta#mobile-react-native--typescript)**Mobile** ([React Native](http://www.reactnative.com/) + [TypeScript](https://www.typescriptlang.org/))
 
 - **[Expo](https://expo.io/)**
 - **[Expo Google Fonts](https://github.com/expo/google-fonts)**
@@ -219,18 +237,19 @@ The following tools were used in the construction of the project:
 - **[Expo Location](https://docs.expo.io/versions/latest/sdk/location/)**
 - **[Expo Mail Composer](https://docs.expo.io/versions/latest/sdk/mail-composer/)**
 
-> See the file [package.json](https://github.com/jhonatheberson/README-ecoleta/blob/master/mobile/package.json)
+> See the file [package.json](https://github.com/jhonatheberson/README-ecoleta/blob/master/mobile/package.json) -->
 
 #### [](https://github.com/jhonatheberson/Ecoleta#utilit%C3%A1rios)**Utilitários**
 
 - Prototype: **[Figma](https://www.figma.com/)** → **[Protótipo (Ecoleta)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
-- API: **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)** → **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**, **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
-- Maps: **[Leaflet](https://react-leaflet.js.org/en/)**
-- Editor: **[Visual Studio Code](https://code.visualstudio.com/)** → Extensions: **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
+<!-- - API: **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)** → **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**, **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)** -->
+<!-- - Maps: **[Leaflet](https://react-leaflet.js.org/en/)** -->
+- Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
+<!-- → Extensions: **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)** -->
 - Markdown: **[StackEdit](https://stackedit.io/)**, **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
 - Commit Conventional: **[Commitlint](https://github.com/conventional-changelog/commitlint)**
 - API Test: **[Insomnia](https://insomnia.rest/)**
-- Icons: **[Feather Icons](https://feathericons.com/)**, **[Font Awesome](https://fontawesome.com/)**
+<!-- - Icons: **[Feather Icons](https://feathericons.com/)**, **[Font Awesome](https://fontawesome.com/)**
 - Fonts: **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**, **[Roboto](https://fonts.google.com/specimen/Roboto)** -->
 
 ---
