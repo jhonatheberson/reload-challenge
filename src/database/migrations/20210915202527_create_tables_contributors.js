@@ -14,7 +14,7 @@ exports.up = (knex) =>
     table.string('jobTitle', [30]).notNullable();
     table.integer('age', [30]);
     table.integer('company_id').unsigned().notNullable();
-
+    // relationship 1 - n
     table.foreign('company_id').references('id').inTable('company');
 
     table.timestamp('create_at').defaultTo(knex.fn.now());

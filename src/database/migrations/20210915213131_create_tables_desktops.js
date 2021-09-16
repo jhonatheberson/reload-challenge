@@ -15,7 +15,7 @@ exports.up = (knex) =>
     table.string('os', [20]);
     table.string('ip', [20]).notNullable().unique();
     table.integer('company_id').unsigned().notNullable();
-
+    // relationship 1 - n
     table.foreign('company_id').references('id').inTable('company');
 
     table.timestamps(true, true);
