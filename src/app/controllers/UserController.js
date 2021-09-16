@@ -1,8 +1,18 @@
 import * as Yup from 'yup'; // pacote de validação
 import knex from '../../database';
 import bcrypt from 'bcryptjs';
-
+/**
+ * this class controls the users
+ */
 class UserController {
+  /**
+   * this function does the post method control
+   * @summary this function creates users
+   * @param {Express} req - this parameter is responsible for bringing the data sent (request)
+   * @param {Express} res - this para is responsible for returning the answer (response)
+   * @param {Express} next - this parameter is responsible for when an error occurs, or ecession it is called, by default, in this case it is used here to return the error
+   * @return {json} returns json com status code
+   */
   async store(req, res, next) {
     try {
       const schema = Yup.object().shape({
@@ -39,7 +49,14 @@ class UserController {
       next(error);
     }
   }
-
+  /**
+   * this function does the get method control
+   * @summary this function list users
+   * @param {Express} req - this parameter is responsible for bringing the data sent (request)
+   * @param {Express} res - this para is responsible for returning the answer (response)
+   * @param {Express} next - this parameter is responsible for when an error occurs, or ecession it is called, by default, in this case it is used here to return the error
+   * @return {json} returns json com users
+   */
   async index(req, res) {
     try {
       const results = await knex('users');
